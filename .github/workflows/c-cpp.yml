@@ -12,10 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - setup:
-      run: sudo apt install gcc-arm-none-eabi
     - uses: actions/checkout@v2
-    - configure:
+    - name: configure
       run: git submodule update --init
+      run: sudo apt install gcc-arm-none-eabi
     - name: make
       run: make -C my-project
