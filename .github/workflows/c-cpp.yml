@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - setup:
-      run sudo apt install gcc-arm-none-eabi
+      run: sudo apt install gcc-arm-none-eabi
     - uses: actions/checkout@v2
     - configure:
-      git submodule update --init
+      run: git submodule update --init
     - name: make
       run: make -C my-project
