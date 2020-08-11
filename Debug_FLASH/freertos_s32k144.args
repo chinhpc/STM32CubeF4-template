@@ -15,13 +15,12 @@
 "./SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o"
 "./SDK/platform/devices/startup.o"
 "./SDK/platform/devices/S32K144/startup/system_S32K144.o"
-"./Project_Settings/Startup_Code/startup_S32K144.o"
 "./Generated_Code/pin_mux.o"
 "./Generated_Code/clockMan1.o"
 "./Generated_Code/Cpu.o"
 --entry=Reset_Handler
 -T
-"C:/Users/chinhpc/workspaceS32DS.ARM.2018.R1/freertos_s32k144/freertos_s32k144/Project_Settings/Linker_Files/S32K144_64_flash.ld"
+"../Project_Settings/Linker_Files/S32K144_64_flash.ld"
 -Wl,-Map,"freertos_s32k144.map"
 -Xlinker
 --gc-sections

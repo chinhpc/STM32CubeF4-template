@@ -52,7 +52,6 @@ C_DEPS :=
 SUBDIRS := \
 Generated_Code \
 Project_Settings/Linker_Files \
-Project_Settings/Startup_Code \
 SDK/platform/devices/S32K144/startup \
 SDK/platform/devices \
 SDK/platform/drivers/src/clock/S32K1xx \

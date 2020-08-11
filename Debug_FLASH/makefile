@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 21
+#Progress monitor hint: 20
 first : all
 -include ../makefile.init
 
@@ -16,7 +16,6 @@ RM := rm -rf
 -include subdir.mk
 -include Generated_Code/subdir.mk
 -include Project_Settings/Linker_Files/subdir.mk
--include Project_Settings/Startup_Code/subdir.mk
 -include SDK/platform/devices/S32K144/startup/subdir.mk
 -include SDK/platform/devices/subdir.mk
 -include SDK/platform/drivers/src/clock/S32K1xx/subdir.mk
@@ -76,16 +75,16 @@ freertos_s32k144.siz \
 all: warning-messages explicit-dependencies freertos_s32k144.elf secondary-outputs
 
 # Tool invocations
-freertos_s32k144.elf: $(OBJS) C:/Users/chinhpc/workspaceS32DS.ARM.2018.R1/freertos_s32k144/freertos_s32k144/Project_Settings/Linker_Files/S32K144_64_flash.ld $(USER_OBJS)
+freertos_s32k144.elf: $(OBJS) ../Project_Settings/Linker_Files/S32K144_64_flash.ld $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Executing target #22 $@'
+	@echo 'Executing target #21 $@'
 	@echo 'Invoking: Standard S32DS C Linker'
 	arm-none-eabi-gcc -o "freertos_s32k144.elf" "@freertos_s32k144.args"  $(USER_OBJS_QUOTED) 
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 freertos_s32k144.siz: $(EXECUTABLES)
-	@echo 'Executing target #23 $@'
+	@echo 'Executing target #22 $@'
 	@echo 'Invoking: Standard S32DS Print Size'
 	arm-none-eabi-size --format=berkeley $(EXECUTABLES)
 	@echo 'Finished building: $@'
@@ -93,7 +92,7 @@ freertos_s32k144.siz: $(EXECUTABLES)
 
 # Other Targets
 clean:
-	-$(RM) ./*/*.d ./*/*/*/*/*/*/*.d ./*/*/*/*/*/*/*/*.d ./*/*/*/*/*.d ./*/*/*/*/*/*.d ./*/*/*/*.d  ./*/*.o ./*/*/*/*/*/*/*.o ./*/*/*/*/*/*/*/*.o ./*/*/*/*/*.o ./*/*/*/*/*/*.o ./*/*/*/*.o ./*/*/*.o  $(SECONDARY_SIZE_QUOTED) $(EXECUTABLES_QUOTED)
+	-$(RM) ./*/*.d ./*/*/*/*/*/*/*.d ./*/*/*/*/*/*/*/*.d ./*/*/*/*/*.d ./*/*/*/*/*/*.d ./*/*/*/*.d  ./*/*.o ./*/*/*/*/*/*/*.o ./*/*/*/*/*/*/*/*.o ./*/*/*/*/*.o ./*/*/*/*/*/*.o ./*/*/*/*.o  $(SECONDARY_SIZE_QUOTED) $(EXECUTABLES_QUOTED)
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_SIZE) $(SECONDARY_SIZE)
